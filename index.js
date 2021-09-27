@@ -1,14 +1,24 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+function isPalindrome(abba) {
 
+let start =0
+let finish =abba.length - 1
+
+while (start < finish) {
+  if (abba[start++] != abba[finish--]) {
+    return false
+  }
+  start ++
+  finish --
+}
+return true
+}
 /* 
   Add your pseudocode here
 */
 
-/*
-  Add written explanation of your solution here
-*/
+
+  // isPalindrome(abba)
+
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
@@ -23,3 +33,4 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
